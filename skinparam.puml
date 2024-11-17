@@ -1,0 +1,23 @@
+@startuml
+skinparam {
+    MaxMessageSize 150
+    SequenceGroupFontSize 13
+    SequenceGroupFontStyle italic
+    SequenceGroupFontName Times New Roman
+    SequenceGroupBorderThickness 1
+    SequenceGroupBorderColor #317FC2
+    SequenceGroupFontColor #317FC2
+    SequenceGroupBodyBackgroundColor white
+    SequenceGroupHeaderFontSize 13
+    SequenceGroupHeaderFontName Times New Roman
+    SequenceGroupHeaderFontStyle normal
+    SequenceGroupHeaderFontColor #317FC2
+    ParticipantBorderColor #317FC2
+    ParticipantFontName Times New Roman
+    SequenceLifeLineBorderColor #317FC2
+    ArrowColor #317FC2
+    ArrowFontName Times New Roman
+}
+hide footbox
+autonumber "[#]"
+@enduml
