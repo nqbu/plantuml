@@ -1,0 +1,73 @@
+@startuml
+!procedure $proxy($text, $actors)
+'Procedure takes as input:
+'text -- will be displayed upon each arrow
+'actors -- string in "", where strictly COMMA delimited actors must follow in desired order
+!$string = $actors
+'input string of actors and first input string length constant
+!$len = %strlen($string)
+!$pos = %strpos($string, ",")
+'returns position of symbol in argument. Starts from 0.
+!$start = 0
+'defines parsing start position. iteration starts with input string length
+!$i=$len
+!$j = 0
+!while $pos >= 0
+!$j = $j + 1
+!$source = $res
+!if $j == 1
+!$source = $res
+!endif
+!$res = %substr($string, $start, $pos)
+!$dest = $res
+!if $j > 1
+$source -> $dest: $text
+!endif
+!$string = %substr($string, $pos+1, $len - $pos)
+!$i=%strlen($string)
+!$pos = %strpos($string, ",")
+!endwhile
+!$j = $j + 1
+!$source = $res
+!$res = $string
+!$dest = $res
+$source -> $dest: $text
+!endprocedure
+
+
+!procedure $proxy_response($text, $actors)
+'Procedure takes as input:
+'text -- will be displayed upon each arrow
+'actors -- string in "", where strictly COMMA delimited actors must follow in desired order
+!$string = $actors
+'input string of actors and first input string length constant
+!$len = %strlen($string)
+!$pos = %strpos($string, ",")
+'returns position of symbol in argument. Starts from 0.
+!$start = 0
+'defines parsing start position. iteration starts with input string length
+!$i=$len
+!$j = 0
+!while $pos >= 0
+!$j = $j + 1
+!$source = $res
+!if $j == 1
+!$source = $res
+!endif
+!$res = %substr($string, $start, $pos)
+!$dest = $res
+!if $j > 1
+$source --> $dest: $text
+!endif
+!$string = %substr($string, $pos+1, $len - $pos)
+!$i=%strlen($string)
+!$pos = %strpos($string, ",")
+!endwhile
+!$j = $j + 1
+!$source = $res
+!$res = $string
+!$dest = $res
+$source --> $dest: $text
+!endprocedure
+
+@enduml
